@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* This is a simple mobile-first approach for the dropdown. */
+        /* You might need to adjust this in your main CSS file for better styling. */
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+        }
+        .nav-links.active {
+            display: flex;
+        }
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+        }
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <div class="hamburger">&#9776;</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="profile-container">
+            <a href="sec.jpg" target="_blank">
+                <img src="sec.jpg" alt="Akash" class="profile-photo">
+                </a>
+            <h1>About Me</h1>
+        </div>
+        <p>Short and crisp:
+
+Hi! I'm Akash, a tech enthusiast who loves coding, learning AI, and creating projects that help people.
+
+Friendly and approachable:
+
+Hey! I’m Akash. I love exploring tech, building small apps, and sharing knowledge with others. Always curious and always learning!</p>
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <p>I am highly proficient in **Python**, having built numerous projects using its powerful libraries and frameworks. My expertise also extends to various other programming languages, including **JavaScript**, **HTML**, and **CSS**, which I use to create dynamic and responsive web applications. I am constantly expanding my knowledge in the fields of AI and machine learning to tackle new challenges.</p>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Python</div>
+        </div>
+    </section>
+
+    <section id="projects">
+    <h1>Projects</h1>
+    <div class="projects-container">
+        <a href="sec5.jpg" target="_blank" class="project-link">
+            <div class="project">
+                <img src="sec5.jpg" alt="Project 1" class="project-image">
+                <h3>Project 1</h3>
+                <p>Short description of project 1.</p>
+            </div>
+        </a>
+        
+        <a href="sec8.jpg" target="_blank" class="project-link">
+            <div class="project">
+                <img src="sec8.jpg" alt="Project 2" class="project-image">
+                <h3>Project 2</h3>
+                <p>Short description of project 2.</p>
+            </div>
+        </a>
+        
+        <a href="sec9.jpg" target="_blank" class="project-link">
+            <div class="project">
+                <img src="sec9.jpg" alt="Project 3" class="project-image">
+                <h3>Project 3</h3>
+                <p>Short description of project 3.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
